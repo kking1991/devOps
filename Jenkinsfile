@@ -33,7 +33,7 @@ node {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
            /* app.push("${tag}")
             *app.push("latest")
-	   sh 'docker push kking?repository:2'
+	   sh 'docker push kking/repository:2'
         }
     }
 }
