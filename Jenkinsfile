@@ -1,6 +1,5 @@
 node {
     
-    tag = "kking/repository:2"
     def app
 
     stage('Clone repository') {
@@ -32,7 +31,7 @@ node {
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
            /* app.push("${tag}")
-            *app.push("latest")
+            *app.push("latest") */
 	   sh 'docker push kking/repository:2'
         }
     }
